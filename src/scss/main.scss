@@ -1,9 +1,15 @@
+@import "variables";
+@import "breakpoints";
+
 * {
   padding: 0;
   margin: 0;
+  font-family: $font-family-plus-jakarta-sans;
+  box-sizing: border-box;
 }
-$color: #ff00bb;
 
-h1 {
-  color: $color;
+a {
+  text-decoration: none;
 }
+
+@import "navigation";

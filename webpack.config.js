@@ -26,6 +26,10 @@ module.exports = {
           preprocessor: (content, loaderContext) => {
             let result;
 
+            const configPath = path.join(__dirname, "src/config.json");
+            const rawConfig = fs.readFileSync(configPath, "utf8");
+            const config = JSON.parse(rawConfig);
+
             const componentsDir = path.join(__dirname, "src/components");
 
             fs.readdirSync(componentsDir).forEach((file) => {
@@ -39,7 +43,7 @@ module.exports = {
               Handlebars.registerPartial(componentName, componentContent);
             });
             try {
-              result = Handlebars.compile(content)();
+              result = Handlebars.compile(content)(config);
             } catch (error) {
               loaderContext.emitError(error);
 
