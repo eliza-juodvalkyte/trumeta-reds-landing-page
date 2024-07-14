@@ -10,6 +10,7 @@ header {
 
   @media (max-width: $breakpoint-mobile) {
     height: 52px;
+    padding: 0 17px;
   }
 }
 
@@ -18,6 +19,12 @@ header {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
+  img {
+    @media (max-width: $breakpoint-mobile) {
+      width: 62px;
+    }
+  }
 }
 
 .navigation {
@@ -35,6 +42,23 @@ header {
   flex-direction: row;
   list-style-type: none;
   gap: 24px;
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 150px;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 52px;
+    padding: 0 24px;
+    transform: translateX(-100%);
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.navigation__list--open {
+  background-color: $light-gray;
+  transform: translateX(0);
 }
 
 .navigation__item {
@@ -44,4 +68,42 @@ header {
   letter-spacing: 0.05em;
   text-align: left;
   color: $primary-black;
+}
+
+.burger-button {
+  display: none;
+  width: 20px;
+  height: 13px;
+  margin: 0 7.5px;
+  position: relative;
+
+  @media (max-width: $breakpoint-mobile) {
+    display: block;
+  }
+}
+
+.burger-button__icon {
+  display: block;
+  background-color: $primary-black;
+  width: 20px;
+  height: 1px;
+  left: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $primary-black;
+    width: 100%;
+    height: 1px;
+    left: 0;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
 }

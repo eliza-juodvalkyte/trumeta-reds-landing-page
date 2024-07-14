@@ -1,0 +1,16 @@
+<header>
+  <button id="burger-button" class="burger-button">
+    <div class="burger-button__icon"></div>
+  </button>
+  <nav class="navigation">
+    <ul class="navigation__list">
+      {{>navigation_item path="/#" name="shop"}}
+      {{>navigation_item path="/#" name="mission"}}
+    </ul>
+  </nav>
+  <a href="/#" class="header__logo">
+    <img src="./assets/img/logo/logo_desktop.png" alt="logo"/>
+  </a>
+</header>
+
+<script src="./components/navigation/navigation.js" defer></script>

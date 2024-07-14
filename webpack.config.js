@@ -26,10 +26,6 @@ module.exports = {
           preprocessor: (content, loaderContext) => {
             let result;
 
-            const configPath = path.join(__dirname, "src/config.json");
-            const rawConfig = fs.readFileSync(configPath, "utf8");
-            const config = JSON.parse(rawConfig);
-
             function registerRecursively(dir) {
               fs.readdirSync(dir).forEach((file) => {
                 const fullPath = path.join(dir, file);
@@ -54,7 +50,7 @@ module.exports = {
             const componentsDir = path.join(__dirname, "src/components");
             registerRecursively(componentsDir);
             try {
-              result = Handlebars.compile(content)(config);
+              result = Handlebars.compile(content)();
             } catch (error) {
               loaderContext.emitError(error);
 
