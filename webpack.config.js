@@ -12,7 +12,7 @@ module.exports = {
     port: 3000,
     watchFiles: ["src/**/*"],
   },
-  entry: "./main.js",
+  entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -30,18 +30,29 @@ module.exports = {
             const rawConfig = fs.readFileSync(configPath, "utf8");
             const config = JSON.parse(rawConfig);
 
+            function registerRecursively(dir) {
+              fs.readdirSync(dir).forEach((file) => {
+                const fullPath = path.join(dir, file);
+
+                if (fs.statSync(fullPath).isDirectory()) {
+                  return registerRecursively(fullPath);
+                }
+
+                if (path.extname(file) !== ".hbs") {
+                  return;
+                }
+
+                loaderContext.addDependency(fullPath);
+
+                const componentContent = fs.readFileSync(fullPath, "utf8");
+                const componentName = path.basename(file, path.extname(file));
+
+                Handlebars.registerPartial(componentName, componentContent);
+              });
+            }
+
             const componentsDir = path.join(__dirname, "src/components");
-
-            fs.readdirSync(componentsDir).forEach((file) => {
-              const fullPath = path.join(componentsDir, file);
-
-              loaderContext.addDependency(fullPath);
-
-              const componentContent = fs.readFileSync(fullPath, "utf8");
-              const componentName = path.basename(file, path.extname(file));
-
-              Handlebars.registerPartial(componentName, componentContent);
-            });
+            registerRecursively(componentsDir);
             try {
               result = Handlebars.compile(content)(config);
             } catch (error) {
