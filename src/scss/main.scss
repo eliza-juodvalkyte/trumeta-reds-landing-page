@@ -36,18 +36,12 @@ h2 {
   font-weight: 600;
   font-size: 22px;
   line-height: 27.72px;
-
-  @media (max-width: $breakpoint-mobile) {
-    font-size: 14px;
-    line-height: 17.64px;
-  }
 }
 
 h3 {
   font-weight: 400;
   font-size: 16px;
   line-height: 20.16px;
-  letter-spacing: 0.05em;
   display: inline;
 
   @media (max-width: $breakpoint-mobile) {
@@ -58,6 +52,7 @@ h3 {
 
 @import "./components/navigation";
 @import "./components/hero";
+@import "./components/subscribe";
 
 section {
   width: 100%;
