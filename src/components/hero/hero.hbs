@@ -1,0 +1,23 @@
+<section>
+  <div class="hero">
+    <picture>
+      <source
+        media="(max-width: 975px)"
+        srcset="./assets/img/home/hero_tablet.jpg"
+      />
+      <source
+        media="(max-width: 450px)"
+        srcset="./assets/img/home/hero_mobile.jpg"
+      />
+      <img src="./assets/img/home/hero_desktop.jpg" alt="Reds smoothie" />
+    </picture>
+  </div>
+  <div class="info">
+    {{>info_card svgPath="./assets/img/energy.svg" title="boosts energy" alt='energy icon' id='energy'}}
+    {{>info_card svgPath="./assets/img/focus.svg" title="enhances focus" alt='focus icon' id='focus'}}
+    {{>info_card svgPath="./assets/img/sleep.svg" title="Improves sleep" alt='sleep icon' id='sleep'}}
+    {{>info_card svgPath="./assets/img/boost.svg" title="Boosts immune system" alt='boost icon' id='boost'}}
+    {{>info_card svgPath="./assets/img/strength.svg" title="Enhances strength" alt='strength icon' id='strength'}}
+    {{>info_card svgPath="./assets/img/digestion.svg" title="Improves digestion" alt='digestion icon' id='digestion'}}
+  </div>
+</section>

@@ -1,11 +1,19 @@
 @import "variables";
 @import "breakpoints";
 
-* {
+html,
+body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
+  height: 100%;
   font-family: $font-family-plus-jakarta-sans;
+}
+
+* {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -17,4 +25,40 @@ button {
   border: none;
 }
 
-@import "navigation";
+h1 {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 51.36px;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27.72px;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 14px;
+    line-height: 17.64px;
+  }
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.16px;
+  letter-spacing: 0.05em;
+  display: inline;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 14px;
+    line-height: 17.64px;
+  }
+}
+
+@import "./components/navigation";
+@import "./components/hero";
+
+section {
+  width: 100%;
+}
