@@ -57,6 +57,7 @@ header {
 }
 
 .navigation__list--open {
+  z-index: 1;
   background-color: $light-gray;
   transform: translateX(0);
 }

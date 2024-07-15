@@ -8,6 +8,7 @@
 @import "./components/certification";
 @import "./components/process";
 @import "./components/greens";
+@import "./components/faq";
 
 html,
 body {
@@ -29,8 +30,9 @@ a {
 }
 
 button {
-  background-color: none;
+  background-color: transparent;
   border: none;
+  font-family: $font-family-plus-jakarta-sans;
 }
 
 h1 {
