@@ -1,6 +1,14 @@
 @import "variables";
 @import "breakpoints";
 
+@import "./components/navigation";
+@import "./components/hero";
+@import "./components/subscribe";
+@import "./components/performance";
+@import "./components/certification";
+@import "./components/process";
+@import "./components/greens";
+
 html,
 body {
   padding: 0;
@@ -58,13 +66,32 @@ picture {
   line-height: 0;
 }
 
-@import "./components/navigation";
-@import "./components/hero";
-@import "./components/subscribe";
-@import "./components/performance";
-@import "./components/certification";
-@import "./components/process";
-
 section {
   width: 100%;
+}
+
+.button {
+  font-family: $font-family-plus-jakarta-sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 15px;
+  width: 360px;
+  height: 54px;
+}
+
+.button--black {
+  color: $white;
+  background-color: $primary-black;
+}
+
+.h3 {
+  font-size: 16px;
+  line-height: 20.16px;
+  letter-spacing: 0.05em;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 14px;
+    line-height: 17.64px;
+  }
 }
