@@ -1,0 +1,32 @@
+.certification {
+  background-color: $light-gray;
+  padding: 25px 0;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 40px;
+  }
+}
+
+.certificatio__content {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 504px;
+  gap: 45px;
+
+  @media (max-width: $breakpoint-small-tablet) {
+    margin: 0 17px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin: 0;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.certification__heading {
+  @media (max-width: $breakpoint-mobile) {
+    text-align: center;
+  }
+}

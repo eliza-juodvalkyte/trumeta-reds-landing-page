@@ -51,10 +51,18 @@ h3 {
   }
 }
 
+picture {
+  display: block;
+  width: auto;
+  height: auto;
+  line-height: 0;
+}
+
 @import "./components/navigation";
 @import "./components/hero";
 @import "./components/subscribe";
 @import "./components/performance";
+@import "./components/certification";
 
 section {
   width: 100%;
