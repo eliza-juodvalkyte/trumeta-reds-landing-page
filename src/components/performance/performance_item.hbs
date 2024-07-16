@@ -1,4 +1,7 @@
 <div class="performance__item" id={{id}}>
+  {{#if svgPath2}}
+    <img src={{svgPath2}} alt={{alt}} class="performance__image" />
+  {{/if}}
   <img src={{svgPath}} alt={{alt}} class="performance__image" />
   <h3 class="performance__title">{{{text}}}</h3>
 </div>

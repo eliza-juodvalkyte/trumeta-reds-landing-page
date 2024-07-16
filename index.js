@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const swiper = new Swiper(".swiper", {
+  new Swiper(".swiper", {
     modules: [Navigation, Pagination],
     loop: true,
     autoHeight: true,
