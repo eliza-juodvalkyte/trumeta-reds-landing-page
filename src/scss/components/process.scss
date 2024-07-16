@@ -108,7 +108,9 @@
 }
 
 .text-with-icon:last-of-type .text-with-icon__divider {
-  display: none;
+  @media (max-width: $breakpoint-small-tablet) {
+    display: none;
+  }
 }
 
 .text-with-icon__divider {

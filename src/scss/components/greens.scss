@@ -33,6 +33,10 @@
   font-size: 50px;
   font-weight: 800;
   line-height: 30px;
+
+  @media (max-width: $breakpoint-tablet) {
+    text-align: center;
+  }
 }
 
 .greens__heading--smaller {
