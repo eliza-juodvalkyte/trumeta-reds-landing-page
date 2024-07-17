@@ -1,0 +1,12 @@
+<div class="swiper-item">
+  <div class="swiper-item__text-wrapper">
+    <span class="reds-text reds-text--absolute"><span class="reds-text--red">reds</span> blen d</span>
+    <p class="swiper-item__description"><span class="swiper-item__description--bold">{{swiper.metabolism.title}}</span>{{{swiper.metabolism.description}}}</p>
+  </div>
+  <div class="swiper-item__image-list">
+    {{>image_item imgSrc="./assets/img/acai_berry.png" description=swiper.metabolism.items.acai }}
+    {{>image_item imgSrc="./assets/img/acacia_gum.png" description=swiper.metabolism.items.acacia }}
+    {{>image_item imgSrc="./assets/img/cinnamon_bark.png" description=swiper.metabolism.items.ceylon }}
+    {{>image_item imgSrc="./assets/img/green_tea.png" description=swiper.metabolism.items.green_tea }}
+  </div>
+</div>

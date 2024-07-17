@@ -1,9 +1,13 @@
+require("dotenv").config();
+
 const path = require("path");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const Handlebars = require("handlebars");
 const fs = require("fs");
+
+const locale = process.env.LOCALE;
 
 module.exports = {
   devServer: {
@@ -49,8 +53,20 @@ module.exports = {
 
             const componentsDir = path.join(__dirname, "src/components");
             registerRecursively(componentsDir);
+
+            const translationsPath = path.resolve(
+              __dirname,
+              "src",
+              "locales",
+              locale + ".json"
+            );
+
+            const translations = JSON.parse(
+              fs.readFileSync(translationsPath, "utf8")
+            );
+
             try {
-              result = Handlebars.compile(content)();
+              result = Handlebars.compile(content)({ ...translations });
             } catch (error) {
               loaderContext.emitError(error);
 

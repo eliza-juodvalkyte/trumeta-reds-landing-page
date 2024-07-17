@@ -1,39 +1,39 @@
 <section class="performance">
-  <h2 class="performance__heading">Performance nutrition and healthy transformation made simple:</h2>
+  <h2 class="performance__heading">{{performance.title}}</h2>
   <div class="performance__items">
     {{>performance_item
       svgPath="./assets/img/running.svg"
-      text="Enhance <b>endurance</b>, <b>performance</b>, and exercise <b>recovery</b>" alt="Running icon" 
+      text=performance.items.endurance alt="Running icon" 
       id="performance_running"
     }}
     {{>performance_item 
       svgPath="./assets/img/energy.svg" 
       svgPath2="./assets/img/energy_red.svg" 
-      text="Enjoy jitter-free <b>energy</b> to tackle your busy schedule" 
+      text=performance.items.schedule 
       alt="Energy icon" 
       id='performance_energy'
     }}
     {{>performance_item 
       svgPath="./assets/img/immune_health.svg" 
-      text="Strengthen your <b>immune health</b> to stay on your game" 
+      text=performance.items.immune 
       alt='Immune health icon' 
       id='performance_immune_health'
     }}
     {{>performance_item 
       svgPath="./assets/img/thumbs_up.svg" 
-      text="<b>Tastes amazing!</b> No bitterness, gritty, or clumpy texture" 
+      text=performance.items.taste 
       alt='Thumbs up icon' 
       id='performance_thumbs_up'
     }}
     {{>performance_item 
       svgPath="./assets/img/checkmark.svg" 
-      text="<b>30 sec habit.</b> Mixes in any beverage fast and easy" 
+      text=performance.items.habit
       alt='Checkmark icon' 
       id='performance_checkmark'
     }}
     {{>performance_item 
       svgPath="./assets/img/metabolism.svg" 
-      text="Recharged <b>metabolism</b> to stay in peak shape" 
+      text=performance.items.metabolism
       alt='Metabolism icon'
       id='performance_metabolism'
     }}

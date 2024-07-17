@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "shop": "shop",
+    "mission": "mission"
+  },
+  "buttons": {
+    "cart": "add to cart",
+    "learn_more": "learn more"
+  },
+  "hero": {
+    "info_card": {
+      "energy": "boost energy",
+      "focus": "enhances focus",
+      "sleep": "Improve sleep",
+      "immune": "Boosts immune system",
+      "strength": "Enhances strength",
+      "digestion": "Improves digestion"
+    }
+  },
+  "subscribe": {
+    "title": "subscribe & save",
+    "delivery": "delivery every 30 days",
+    "value": "best value per box",
+    "cancel": "no commitment, cancel anytime"
+  },
+  "performance": {
+    "title": "Performance nutrition and healthy transformation made simple:",
+    "items": {
+      "endurance": "Enhance <b>endurance</b>, <b>performance</b>, and exercise <b>recovery</b>",
+      "schedule": "Enjoy jitter-free <b>energy</b> to tackle your busy schedule",
+      "immune": "Strengthen your <b>immune health</b> to stay on your game",
+      "taste": "<b>Tastes amazing!</b> No bitterness, gritty, or clumpy texture",
+      "habit": "<b>30 sec habit.</b> Mixes in any beverage fast and easy",
+      "metabolism": "Recharged <b>metabolism</b> to stay in peak shape"
+    }
+  },
+  "certification": "only exceptional USDA certified organic sustainable sourced ingredients qualify.",
+  "swiper": {
+    "metabolism": {
+      "title": "Metabolism Boosting",
+      "description": "<br><br>These powerful superfoods ignite your metabolism and reduce bloating. They improve digestion and deliver the energy you need to get things done.<br><br>Main Organic Ingiredents:",
+      "items": {
+        "acai": "organic acai berry",
+        "acacia": "organic acacia gum",
+        "ceylon": "organic ceylon cinnamon bark",
+        "green_tea": "organic green tea"
+      }
+    }
+  },
+  "process": {
+    "title": "meticulous methodical process",
+    "mission": {
+      "title": "Mission",
+      "description": "our team of researchers are working around the clock to uncover the best performance and health-boosting superfoods on the planet. We do the homework so you don’t have to. Each superfood is supported by strong clinical studies."
+    },
+    "problem": {
+      "title": "The problem",
+      "description": "our advisory panel reviews all of the scientific research in detail. Each ingredient must pass the rigorous approval process. Once approved, only then do our formulas move on to production."
+    },
+    "therapeutic": {
+      "title": "That isn’t therapeutic",
+      "description": "production takes place in our GMP-compliant, state of the art manufacturing facility. Once again, only using 100% organic ingredients that have been verified by the USDA."
+    },
+    "result": {
+      "title": "The result",
+      "description": "getting our formulas into the hands of people who need it most and transforming lives for the better. We believe in improving humankind by improving human performance. And that starts with nourishing your body with the right fuel."
+    },
+    "badges": {
+      "vegan": "vegan",
+      "gluten_free": "gluten free",
+      "dairy_free": "dairy free",
+      "non_gmo": "non gmo",
+      "soy_free": "soy free",
+      "nut_free": "nut free",
+      "shellfish_free": "shellfish free",
+      "sesame_free": "sesame free"
+    }
+  },
+  "faq": {
+    "title": "FAQs",
+    "effective_ingredients": {
+      "question": "What are the Effective ingredients in Trumeta Reds?",
+      "answer": "Trumeta Reds contains 3 blends and 25 vitality-boosting superfoods:<br><br><b>Metabolism-Boosting Blend:</b><br>Organic Acai - This Amazon superfruit is a rich source of healthy fats. Clears brain fog and promotes stronger memory.<br>Organic Green Tea - Improves memory, focus, and the ability to relax. Promotes healthier sugar metabolism.<br>Organic Acacia - This ancient Egyptian remedy calms the belly. Reduces diarrhea and constipation. Decreases body fat.<br>Organic Cinnamon - This belly-slimming sweet spice blocks carb breakdown and sugar absorption. Reduces appetite and balances blood sugar.<br><b>Super Antioxidant Immune Blend:</b><br>Organic Pineapple - This Hawaiian treat decreases joint discomfort and accelerates exercise recovery.<br>Organic Strawberry - Promotes healthy blood sugar and cholesterol. Protects nerve cells in the brain.<br>Organic Beetroot - Enhances blood flow, circulation, and metabolic repair.<br>Organic Bilberry - Curbs cravings. Boosts energy levels. Promotes healthy digestion. Decreases diarrhea.<br>Organic Raspberry - Supports joint health and comfort. Reduces fat accumulation and fatty deposits in the liver.<br>Organic Blueberry - Enhances focus and productivity. Improves muscle soreness and recovery after exercise.<br>Organic Banana - Improves gut and immune health. Reduces appetite.<br>Organic Cranberry - Promotes a healthy urinary tract. Great for UTI prevention. Supports healthy skin and heart.<br>Organic Pomegranate - This ancient biblical fruit maintains a healthy bacteria balance in your gut. Supports stronger memory and brain health.<br>Organic Cherry - Supports a restful night’s sleep. May increase sleep duration by almost 90 minutes.<br>Organic Apple - Keeps you feeling full so you eat less. Promotes a healthy gut and digestion.<br>Organic Papaya - Reduces skin aging. Reduces bloating and constipation weighing you down.<br>Organic Goji - Enhances glucose energy metabolism. Reduces fatty liver deposits.<br>Organic Grape - Boosts skin collagen. Protects vision from harmful blue light. Promotes a healthy heart and bones.<br>Organic Maqui - Growing high up in the Chilean mountains, this superfruit balances blood sugar and fights premature aging.<br><b>Endurance Blend:</b><br>Organic Reishi Mushroom - Dubbed the “Mushroom of Immortality”, this mushroom fights off harmful pathogens. Supports healthy blood sugar and fats.<br>Organic Cordyceps Mushroom - Enhances tissue and muscle repair. Dramatically boosts cellular energy production. Improves sexual function.<br>Organic Shiitake Mushroom - Fights against abnormal cell growth and harmful pathogens. Promotes healthy heart and arteries.<br>Organic King Oyster Mushroom - This King is “The King of Immune Fortification.” It protects your major organs from dangerous toxins and microbes.<br>Organic Lion’s Mane Mushroom - Grows new brain cells and improves memory. Removes fatty deposits in the liver.<br>Organic Turkey Tail Mushroom - Repairs skin damage and promotes a younger-looking complexion. Keeps your energy levels steady."
+    },
+    "other": {
+      "question": "Other question?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    }
+  },
+  "greens": {
+    "title": {
+      "top": "You may also like",
+      "bottom": "greens"
+    },
+    "description": "These  vitality-boosting GREENS will  boost your energy, improve metabolism and increase productivity. Greens supports healthier gut, reduces bloating, enhances focus and promotes smoother skin."
+  }
+}
