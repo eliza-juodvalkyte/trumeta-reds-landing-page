@@ -6,7 +6,7 @@
     padding: 35px 0 80px;
   }
 
-  @media (max-width: $breakpoint-small-tablet) {
+  @media (max-width: $breakpoint-mobile) {
     padding: 35px 0 40px;
   }
 }
@@ -33,7 +33,7 @@
     height: 615px;
   }
 
-  @media (max-width: $breakpoint-small-tablet) {
+  @media (max-width: $breakpoint-mobile) {
     padding: 0 17px;
     height: 689px;
   }
@@ -64,7 +64,7 @@
     transform: translateX(-70%);
   }
 
-  @media (max-width: $breakpoint-small-tablet) {
+  @media (max-width: $breakpoint-mobile) {
     top: -136px;
     transform: translateX(-70%);
   }
@@ -82,7 +82,7 @@
     max-width: 524px;
   }
 
-  @media (max-width: $breakpoint-small-tablet) {
+  @media (max-width: $breakpoint-mobile) {
     max-width: 362px;
   }
 }
@@ -142,7 +142,7 @@
     margin-top: 55px;
   }
 
-  @media (max-width: $breakpoint-small-tablet) {
+  @media (max-width: $breakpoint-mobile) {
     margin-top: 48px;
   }
 }
@@ -159,6 +159,7 @@
 .button-next {
   width: 17px;
   height: 24px;
+  cursor: pointer;
 }
 
 .pagination {
@@ -177,7 +178,9 @@
   border-radius: 50%;
   width: 11px;
   height: 11px;
+  cursor: pointer;
 }
+
 .pagination__bullet--active {
   background-color: $primary-black;
 }

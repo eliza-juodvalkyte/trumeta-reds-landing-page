@@ -2,10 +2,7 @@
   background-color: $light-green1A;
   padding: 40px 0;
 
-  @media (max-width: $breakpoint-small-tablet) {
-    padding: 40px 28px;
-  }
-  @media (max-width: $breakpoint-small-tablet) {
+  @media (max-width: $breakpoint-mobile) {
     padding: 40px 17px;
   }
 }
@@ -56,7 +53,7 @@
     margin: 29px 0 40px;
   }
 
-  @media (max-width: $breakpoint-small-tablet) {
+  @media (max-width: $breakpoint-mobile) {
     margin: 40px 0;
   }
 }

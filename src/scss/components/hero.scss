@@ -1,5 +1,3 @@
-@import "../breakpoints";
-
 .hero {
   position: relative;
   height: auto;
@@ -30,22 +28,19 @@
   margin: 0 auto;
   gap: 25px;
   padding: 50px 0;
-  grid-template-rows: 98px;
 
   @media (max-width: $breakpoint-tablet) {
-    grid-template-rows: 118px;
     justify-content: center;
     margin: 0 36px;
     padding: 40px 0;
     grid-column-gap: 32px;
   }
-  @media (max-width: $breakpoint-small-tablet) {
-    grid-template-rows: repeat(2, 118px);
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   @media (max-width: $breakpoint-mobile) {
-    margin: 0 17px;
+    max-width: 360px;
+    grid-template-rows: repeat(2, 118px);
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
     padding: 30px 0;
     grid-gap: 20px;
   }
@@ -57,21 +52,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
   gap: 15px;
+  height: 98px;
 
   @media (max-width: $breakpoint-tablet) {
+    height: unset;
     gap: 4px;
     flex-direction: column;
   }
 
   @media (max-width: $breakpoint-mobile) {
     background-color: $soft-beige;
+    padding: 15px;
   }
 }
 
 .info__card-title {
   color: $primary-black;
-  max-width: 80px;
+  width: min-content;
 
   @media (max-width: $breakpoint-tablet) {
     text-align: center;
@@ -115,4 +114,8 @@
   @media (max-width: $breakpoint-mobile) {
     order: 1;
   }
+}
+
+#boost .info__card-title {
+  width: auto;
 }

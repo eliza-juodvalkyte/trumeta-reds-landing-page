@@ -32,14 +32,11 @@
     grid-row-gap: 40px;
   }
 
-  @media (max-width: $breakpoint-small-tablet) {
-    max-width: 100%;
-    margin: 40px 17px 0;
-  }
-
   @media (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr;
     grid-row-gap: 30px;
+    max-width: 100%;
+    margin: 40px 17px 0;
   }
 }
 
@@ -50,6 +47,7 @@
 
   @media (max-width: $breakpoint-mobile) {
     gap: 20px;
+    justify-content: center;
   }
 }
 

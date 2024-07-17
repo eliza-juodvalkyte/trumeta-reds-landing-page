@@ -6,7 +6,7 @@
     padding: 36px 37px 40px;
   }
 
-  @media (max-width: $breakpoint-small-tablet) {
+  @media (max-width: $breakpoint-mobile) {
     padding: 36px 17px 40px;
   }
 }
@@ -27,6 +27,10 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+
+  @media (max-width: $breakpoint-mobile) {
+    max-width: 360px;
+  }
 }
 
 .faq-item__button {
@@ -47,7 +51,7 @@
     max-width: 524px;
   }
 
-  @media (max-width: $breakpoint-small-tablet) {
+  @media (max-width: $breakpoint-mobile) {
     max-width: 279px;
   }
 }
@@ -63,7 +67,7 @@
     max-width: 630px;
   }
 
-  @media (max-width: $breakpoint-small-tablet) {
+  @media (max-width: $breakpoint-mobile) {
     max-width: 295px;
   }
 }

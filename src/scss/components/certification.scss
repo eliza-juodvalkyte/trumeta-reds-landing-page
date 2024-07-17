@@ -14,12 +14,7 @@
   max-width: 504px;
   gap: 45px;
 
-  @media (max-width: $breakpoint-small-tablet) {
-    margin: 0 17px;
-  }
-
   @media (max-width: $breakpoint-mobile) {
-    margin: 0;
     flex-direction: column;
     gap: 30px;
   }

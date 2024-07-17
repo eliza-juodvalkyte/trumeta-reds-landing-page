@@ -1,6 +1,4 @@
-@import "../breakpoints";
-
-header {
+.header {
   background-color: $light-gray;
   height: 80px;
   width: 100vw;
@@ -31,6 +29,7 @@ header {
   margin: 0 auto;
   width: 100%;
   max-width: 927px;
+  z-index: 1;
 
   @media (max-width: $breakpoint-tablet) {
     margin: 0 24px;
@@ -47,19 +46,17 @@ header {
     width: 150px;
     height: 100vh;
     position: absolute;
-    left: 0;
+    left: -150px;
     top: 52px;
     padding: 0 24px;
-    transform: translateX(-100%);
     flex-direction: column;
     transition: transform 0.3s ease-in-out;
+    background-color: $light-gray;
   }
 }
 
 .navigation__list--open {
-  z-index: 1;
-  background-color: $light-gray;
-  transform: translateX(0);
+  transform: translateX(100%);
 }
 
 .navigation__item {
