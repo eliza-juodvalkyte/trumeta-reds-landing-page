@@ -9,6 +9,38 @@ const fs = require("fs");
 
 const locale = process.env.LOCALE;
 
+const getTranslations = (locale) => {
+  const translationsPath = path.resolve(
+    __dirname,
+    "src",
+    "locales",
+    locale + ".json"
+  );
+
+  return JSON.parse(fs.readFileSync(translationsPath, "utf8"));
+};
+
+const registerHandlebarsPartials = (loaderContext, dir) => {
+  fs.readdirSync(dir).forEach((file) => {
+    const fullPath = path.join(dir, file);
+
+    if (fs.statSync(fullPath).isDirectory()) {
+      return registerHandlebarsPartials(loaderContext, fullPath);
+    }
+
+    if (path.extname(file) !== ".hbs") {
+      return;
+    }
+
+    loaderContext.addDependency(fullPath);
+
+    const componentContent = fs.readFileSync(fullPath, "utf8");
+    const componentName = path.basename(file, path.extname(file));
+
+    Handlebars.registerPartial(componentName, componentContent);
+  });
+};
+
 module.exports = {
   devServer: {
     static: "./dist",
@@ -30,40 +62,10 @@ module.exports = {
           preprocessor: (content, loaderContext) => {
             let result;
 
-            function registerRecursively(dir) {
-              fs.readdirSync(dir).forEach((file) => {
-                const fullPath = path.join(dir, file);
-
-                if (fs.statSync(fullPath).isDirectory()) {
-                  return registerRecursively(fullPath);
-                }
-
-                if (path.extname(file) !== ".hbs") {
-                  return;
-                }
-
-                loaderContext.addDependency(fullPath);
-
-                const componentContent = fs.readFileSync(fullPath, "utf8");
-                const componentName = path.basename(file, path.extname(file));
-
-                Handlebars.registerPartial(componentName, componentContent);
-              });
-            }
-
             const componentsDir = path.join(__dirname, "src/components");
-            registerRecursively(componentsDir);
+            registerHandlebarsPartials(loaderContext, componentsDir);
 
-            const translationsPath = path.resolve(
-              __dirname,
-              "src",
-              "locales",
-              locale + ".json"
-            );
-
-            const translations = JSON.parse(
-              fs.readFileSync(translationsPath, "utf8")
-            );
+            const translations = getTranslations(locale);
 
             try {
               result = Handlebars.compile(content)({ ...translations });
